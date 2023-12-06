@@ -1,4 +1,4 @@
-.container {
+.container { /*CONTAINER DO MENU*/
     border: solid;
     width: 298px;
     height:50px;
@@ -9,7 +9,7 @@
     margin-top: -3px;
     margin-left: -2px;
 }
-.container2 {
+.container2 {/*CONTAINER DO MENU (LOGO IMAGEM)*/
     border: solid;
     display: inline-block;
     width: fit-content;
@@ -19,11 +19,11 @@
     background-color: rgb(146,133, 249);
     border-color: rgb(0, 94, 184);
 }
-.container2 img{
+.container2 img{/*IMAGEM SEBRAE LOGO*/
     transform: skew(30deg);
     width: 200px; height: 110px;
 }
-.container-carrossel{
+.container-carrossel{/*CONTAINER GERAL DO CARROSSEL*/
     border: solid;
     width: 1850px;
     height: 800px;
@@ -31,52 +31,56 @@
     display: flex;
     justify-content: center;
 }
-.containerss{
+.containerss{ /*CONTAINER DENTRO DO CONTAINER GERAL*/
     width: 100%;
 }
-.container-geral{
+.container-geral{/*CONTAINER GERAL DOS SLIDES*/
     display: flex;
     justify-content: center;
     position: fixed;
     margin-left: -19px;
 }
-.container h5 {
+.container h5 { /*CONFIG H5*/
     margin: 0;
     transform: skew(20deg);
     color: rgb(0, 94, 184);
     margin-top: 10px;
 }
-
-.carousel-indicators {/*INDICADORES*/
-    bottom: 10px;
-    margin-bottom: 0;
-    display: flex; /* Remove a margem padrão do Bootstrap */
+/*CONFIG TEXTO MENU*/
+  #texto1{
+    margin-left: 89px;
+    position: fixed;
   }
+  #texto2{
+    margin-left: 89px;
+    position: fixed;
+  }
+  #texto3{
+    margin-left: 79px;
+    position: fixed;
+  }
+  #texto5{
+    margin-left: 89px;
+    position: fixed;
+  }
+  #texto6{
+    margin-left: 21px;
+    position: fixed;  
+  }
+  #texto7{
+    margin-left: 89px;
+    position: fixed;
+  }
+/*CONFIG TEXTO MENU*/
 
-  .carousel-indicators li {/*INDICADORES BACKGROUND*/
-    background-color: #9285F9; /* Cor de fundo do indicador ativo */
-    width: 50px; /* Largura do indicador */
-    height: 10px; /* Altura do indicador */
-    border: solid;
-    border-radius: 20px;
+  #indicador { /*ID DE INDICADOR NO MENU*/
     position: relative;
+    width: 298px; /* Largura da div */
+    height: 50px; /* Altura da div */
     overflow: hidden;
   }
-  #indicador{
-    position: relative;
-    width: 50px; /* Largura do indicador */
-    height: 10px; /* Altura do indicador */
-    margin: 0 5px; /* Margem entre indicadores */
-    overflow: hidden;
-  }
-
-  .carousel-indicators .active {/*INDICADORES QUANDO ATIVOS*/
-    background-color: #9285f9; /* Cor de fundo do indicador ativo */
-     /* Cor da borda do indicador ativo */
-    border-radius: 20px;
-    border: solid;
-  }
-  .carousel-indicators .active .progresso{
+  /*DEFININDO ESPECIFICAÇÃO PARA ATIVAÇÃO DA BARRA DE PROGRESSO*/
+  .container-geral .active .progresso{
     position: absolute;
     top: 0;
     left: 0;
@@ -85,11 +89,12 @@
     animation: grow 5s ease-in-out infinite; /* Animação de crescimento */
     transform-origin: left center; /* Ponto de origem da transformação */
   }
-  .indicador.active .progresso {
+  
+  .container .active .progresso {
     animation-play-state: paused; /* Pausar a animação quando o indicador está ativo */
   }
 
-  @keyframes grow {
+  @keyframes grow {/*USADO PARA FAZER A BARRA DE PROGRESSO*/
     0% {
       width: 0; /* Largura inicial da barra de progresso */
     }
@@ -98,6 +103,7 @@
     }
   }
 
+  /*LARGURA E PARAMETROS DA DIV DENTRO DO SLIDE*/
   .informacao1{
     border: solid;
     border-radius: 60px;
@@ -173,14 +179,18 @@
     align-items: center;
     text-align: center;
   }
+  /*LARGURA E PARAMETROS DA DIV DENTRO DO SLIDE*/
+
+  /*TEXTO DE FORMATAÇÃO DENTRO DO SLIDE*/
   #texto{
     margin: 10px;
   }
-
-  .carousel-item img{
+  
+  .carousel-item img{/*DEFINIÇÃO DAS PROPRIEDADES DAS IMAGENS*/
     width: 1400px;height: 794px;
   }
-@media screen and (max-width:1600px) {
+  
+@media screen and (max-width:1600px) {/*PARA TELAS COM MENOS DE 1600PX (NOTEBOOKS, DESKTOPS ETC)*/
   /*MENU*/
   .container {
     border: solid ;

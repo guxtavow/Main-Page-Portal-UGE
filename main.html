@@ -14,38 +14,44 @@
     <body>
     <!--MENU DO TOPO-->
     <div class="container-geral">
-        <div class="container text-center">
-        <h5>EXEMPLO 1</h5>
-        </div>
-        <div class="container text-center">
-            <h5>DIA A DIA</h5>
-        </div>
-        <div class="container text-center">
-            <h5>PESQUISAS</h5>
-        </div>
-        <div class="container2 img-fluid">
-           <img src="images/Sebrae.png">
+        <div class="container active" data-target="#meuCarousel" data-slide-to="0" id="indicador"><!--ATIVAÇÃO DO CONTEINER E INDICADORES -->
+        <div class="progresso"><h5 id="texto1">EXEMPLO 1</h5></div><!--BARRA DE PROGRESSO EM CIMA DO MENU-->
         </div>
 
-        <div class="container text-center">
-            <h5>PROCESSOS</h5>
+        <div class="container" data-target="#meuCarousel" data-slide-to="1" id="indicador" >
+        <div class="progresso"><h5 id="texto2">DIA A DIA</h5></div>
         </div>
-        <div class="container text-center">
-            <h5>METAS MOBILIZADORAS</h5>
+
+        <div class="container">
+        <div class="progresso"><h5 id="texto3">PESQUISAS</h5></div>
         </div>
-        <div class="container text-center">
-          <h5>EXEMPLO 2</h5>
+
+        <div class="container2 img-fluid"><!--IMAGEM LOGO MEIO-->
+           <img src="images/Sebrae.png"><!--SEBRAE LOGO PNG-->
+        </div>
+
+        <div class="container">
+        <div class="progresso"><h5 id="texto5">PROCESSOS</h5></div>
+        </div>
+        
+        <div class="container">
+        <div class="progresso"><h5 id="texto6">METAS MOBILIZADORAS</h5></div>
+        </div>
+
+        <div class="container">
+        <div class="progresso"><h5 id="texto7">EXEMPLO 2</h5></div>
         </div>
     </div>
+    <!--MENU DO TOPO-->
         <br>
         <br>
+        <br><!--ESPAÇAMENTO DA PAGINA-->
         <br>
         <br>
-        <br>
-    <div class="container-carrossel">
-        <div class="containerss">
-            <div id="meuCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-              <div class="carousel-inner">
+    <div class="container-carrossel"><!--CONTAINER GERAL DO CARROSSEL-->
+        <div class="containerss"><!--CONTAINER DENTRO DO GERAL-->
+            <div id="meuCarousel" class="carousel slide" data-ride="carousel" data-interval="5000"> <!--DEFININDO TEMPO DE ROLAGEM DO CARROSSEL E SEUS ATRIBUTOS-->
+              <div class="carousel-inner"><!--CARROSSEL EM SI-->
                 <div class="carousel-item active"> <!--CARROSSEL UM!!!-->
                     <div class="informacao1">
                       <h1>TESTE TESTE TESTE</h1>
@@ -96,10 +102,7 @@
                 <!-- Adicione mais itens conforme necessário -->
               </div>
             </div>
-            <ol class="carousel-indicators">
-              <li data-target="#meuCarousel" data-slide-to="0" id="indicador" class="active"><div class="progresso"></div></li>
-              <li data-target="#meuCarousel" data-slide-to="1" id="indicador"><div class="progresso"></div></li>
-            </ol>
+
           </div>
     </div>
 
