@@ -1,0 +1,143 @@
+
+body{
+    background: url('sources/Imagem7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logoSebrae {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 190px;
+    opacity: 0;
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+.fade-in {
+    opacity: 1;
+}
+
+.animate {
+    transform: scale(0.5) translate(-80vw, -58vh);
+}
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: -1100px; /* Inicialmente fora da tela */
+    width: 1000px;
+    height: 100%;
+    background-color: #292323;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.offcanvas-aberto  {
+    margin-right: 1000px; /* Ajuste conforme a largura do offcanvas */
+    transition: margin-right 1.9s ease-in-out;
+  }
+  .offcanvas-fechado{
+    margin-right: -1000px;
+    transition: margin-right 1.9s ease-in-out;
+}
+#conteudo{
+    color: rgb(8, 247, 8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 190px;    
+    opacity: 1;
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+#ConteudoOffCanvas{
+    width: 700px;
+    height: 800px;
+    opacity: 1;
+
+}
+#imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+
+@media screen and (max-width:1400px) {
+
+    
+body{
+    background: url('sources/Imagem7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logoSebrae {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 144px;
+    opacity: 0;
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+.fade-in {
+    opacity: 1;
+}
+.fade-out{
+    opacity: 0;
+}
+
+.animate {
+    transform: scale(0.5) translate(-76vw, -72vh);
+}
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: -900px; /* Inicialmente fora da tela */
+    width: 800px;
+    height: 100%;
+    background-color: #292323;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.offcanvas-aberto  {
+    margin-right: 800px; /* Ajuste conforme a largura do offcanvas */
+    transition: margin-right 1.9s ease-in-out;
+  }
+
+.offcanvas-fechado{
+    margin-right: -800px;
+    transition: margin-right 1.9s ease-in-out;
+}
+#conteudo{
+    color: rgb(8, 247, 8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;    
+    opacity: 1;
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+#ConteudoOffCanvas{
+    width: 600px;
+    height: 600px;
+    opacity: 1;
+}
+#imagem{
+    opacity: 1;
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+}
+

@@ -4,10 +4,16 @@ const app = express()//utilizando a variavel app como chamada pro express
 
 const PORT = 8081;
 app.use(express.static("index"))//esta configuração faz a requisição para o Browser trazer todos os arquivos integrados a parte de HTML (como o CSS e o JavaScript)
+app.use(express.static("intro"))
 
 //main page
+app.get("/main",(req,res)=>{
+    res.sendFile(__dirname+'/index/main.html')
+})
+
+
 app.get("/",function(req, res){
-    res.sendFile(__dirname+"/index/main.html")//"__dirname" puxa o diretorio base onde o arquivo está e deve se concatenar com o segmento do arquivo que quero inserir
+    res.sendFile(__dirname+"/intro/intro.html")//"__dirname" puxa o diretorio base onde o arquivo está e deve se concatenar com o segmento do arquivo que quero inserir
 });
 
 //porta do servidor
