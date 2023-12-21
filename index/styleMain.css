@@ -1,3 +1,8 @@
+body{
+  background: linear-gradient(to top,#3B4AFF, #40BBFF);
+  height: 911px;
+}
+
 .container { /*CONTAINER DO MENU*/
     border: solid;
     width: 298px;
@@ -5,20 +10,32 @@
     transform: skew(-30deg);   
     display: inline-block;
     vertical-align: top;
-    border-color: rgb(0, 94, 184);
+    background: linear-gradient(to bottom,#3B4AFF, #0024A9);
+    border: 3px solid;
     margin-top: -3px;
     margin-left: -2px;
     transition: transform 1s ease-in-out;
 }
+
+#imagemFundo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%,-34%) ;
+  width: 780px; 
+  height: 340px;
+  z-index: -1;
+}
+
 .container2 {/*CONTAINER DO MENU (LOGO IMAGEM)*/
     border: solid;
     display: inline-block;
     width: fit-content;
     transform: skew(-30deg);   
-    margin-left: -30px;
+    margin-left: -33px;
     margin-right: 20px;
     background-color: rgb(146,133, 249);
-    border-color: rgb(0, 94, 184);
+    border: solid;
 }
 .container2 img{/*IMAGEM SEBRAE LOGO*/
     transform: skew(30deg);
@@ -47,40 +64,56 @@
     color: rgb(0, 94, 184);
     margin-top: 10px;
 }
+
+.carousel-item{
+  background-color: white;
+  height: 774px;
+}
+.carousel-item .active{
+ height: 757px;
+}
 /*CONFIG TEXTO MENU*/
   #texto1{
     margin-left: 89px;
     position: fixed;
+    color: white;
   }
   #texto2{
     margin-left: 89px;
     position: fixed;
+    color: white;
   }
   #texto3{
     margin-left: 79px;
     position: fixed;
+    color: white;
   }
   #texto5{
     margin-left: 89px;
     position: fixed;
+    color: white;
   }
   #texto6{
     margin-left: 21px;
-    position: fixed;  
+    position: fixed;
+    color: white;  
   }
   #texto7{
     position: fixed;
     margin: auto;
     margin-left: 79px;
+    color: white;
   }
   #texto8{
     position: fixed;
     margin: auto;
     margin-left: 79px;
+    color: white;
   }
   #texto9{
     position: fixed;
     margin-left: 79px;
+    color: white;
   }
   
 /*CONFIG TEXTO MENU*/
@@ -199,10 +232,26 @@
   }
   
   .carousel-item img{/*DEFINIÇÃO DAS PROPRIEDADES DAS IMAGENS*/
-    width: 1400px;height: 774px;
+    width: 1400px;height: 776px;
   }
   
 @media screen and (max-width:1600px) {/*PARA TELAS COM MENOS DE 1600PX (NOTEBOOKS, DESKTOPS ETC)*/
+  body{
+    background: linear-gradient(to top,#40BBFF,#3B4AFF);
+    height: 695px;
+    position: relative;
+  }
+
+  #imagemFundo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,-34%) ;
+    width: 780px; 
+    height: 340px;
+    z-index: -1;
+  }
+
   /*MENU*/
   .container {
     border: solid ;
@@ -211,13 +260,18 @@
     transform: skew(-30deg);   
     display: inline-block;
     vertical-align: top;
-    border-color: rgb(0, 94, 184);
+    border: 2px solid;
+    background: linear-gradient(to right,#9285F9,#3B4AFF);
     margin-top: -3px;
-    margin-left: -3px;
+    margin-left: -2px;
+    z-index: 2;
+
 }
+
 .container h5{
   font-size: 15px;
 }
+
 .container2 {
     border: solid;
     display: inline-block;
@@ -226,8 +280,9 @@
     margin-left: -30px;
     margin-right: 20px;
     background-color: rgb(146,133, 249);
-    border-color: rgb(0, 94, 184);
+    border:solid;
 }
+
 .container2 img{
     transform: skew(30deg);
     width: 180px; height: 100px;
@@ -249,7 +304,7 @@
     display: flex;
     justify-content: center;
     position: fixed;
-    margin-left: 65px;
+    margin-left: 69px;
 
 }
 .container h5 {
@@ -258,6 +313,15 @@
     margin-top: 10px;
 } 
 
+.carousel-item{
+  background-color: white;
+  height: 566px;
+}
+.carousel-item .active{
+ height: 530px;
+}
+
+
 /*CONFIG TEXTO MENU*/
 #texto1{
 position: fixed;
@@ -265,14 +329,17 @@ margin-right: 20px;
 margin-left: 50px;
 margin-top: 15px;
 text-align: center;
-
+color: white;
 }
+
 #texto2{
   position: fixed;
   margin-right: 20px;
   margin-top: 15px;
   margin-left: 50px;
   text-align: center;
+  color: white;
+
 }
 
 #texto3{
@@ -281,6 +348,8 @@ text-align: center;
   margin-left: 50px;
   margin-top: 15px;
   text-align: center;
+  color: white;
+
 }
 
 #texto5{
@@ -289,12 +358,17 @@ text-align: center;
   margin-left: 50px;
   margin-top: 15px;
   text-align: center;
+  color: white;
+
 }
 
 #texto6{
   position: absolute;  
   margin-right: 20px;
+  margin-top: 3px;
   text-align: center;
+  color: white;
+
 }
 
 #texto7{
@@ -302,6 +376,8 @@ text-align: center;
   margin-right: 20px;
   margin-left: 50px;
   text-align: center;
+  color: white;
+
 }
 
 #texto8{
@@ -309,6 +385,8 @@ text-align: center;
   margin-right: 20px;
   margin-left: 50px;
   text-align: center;
+  color: white;
+
 }
 
 #texto9{
@@ -317,6 +395,8 @@ text-align: center;
   margin-right: 20px;
   margin-left: 50px;
   text-align: center;
+  color: white;
+
 }
 /*CONFIG TEXTO MENU*/
 
