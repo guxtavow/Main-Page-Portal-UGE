@@ -1,8 +1,9 @@
 body{
-  background: linear-gradient(to top,#3B4AFF, #40BBFF);
-  height: 911px;
-}
+  background: linear-gradient(to top,#3B4AFF, #40BBFF) no-repeat center center fixed; /*UTILIZA A COR LINEARMENTE APLICANDO O GRADIENTE EM TODA A PAGINA SEM REPETIÇÕES NO CENTRO*/
+  height: 100%;
+  
 
+}
 .container { /*CONTAINER DO MENU*/
     border: solid;
     width: 298px;
@@ -17,8 +18,9 @@ body{
     transition: transform 1s ease-in-out;
 }
 
+
 #imagemFundo{
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform:  translate(-50%,-34%) ;
@@ -27,16 +29,16 @@ body{
   z-index: -1;
 }
 
+
 .container2 {/*CONTAINER DO MENU (LOGO IMAGEM)*/
     border: solid;
     display: inline-block;
     width: fit-content;
     transform: skew(-30deg);   
-    margin-left: -33px;
-    margin-right: 20px;
     background-color: rgb(146,133, 249);
     border: solid;
-}
+    z-index: 2;  
+  }
 .container2 img{/*IMAGEM SEBRAE LOGO*/
     transform: skew(30deg);
     width: 200px; height: 110px;
@@ -56,8 +58,10 @@ body{
     display: flex;
     justify-content: center;
     position: fixed;
-    margin-left: -19px;
+    margin-left: -16px;
+    width: auto;
 }
+
 .container h5 { /*CONFIG H5*/
     margin: 0;
     transform: skew(20deg);
@@ -135,10 +139,6 @@ body{
     transform-origin: left center; /* Ponto de origem da transformação */
   }
   
-  .container .active .progresso{
-    animation-play-state: paused; /* Pausar a animação quando o indicador está ativo */
-  }
-
   @keyframes grow {/*USADO PARA FAZER A BARRA DE PROGRESSO*/
     0% {
       width: 0; /* Largura inicial da barra de progresso */
@@ -147,6 +147,19 @@ body{
       width: 100%; /* Largura final da barra de progresso */
     }
   }
+
+  /* CSS */
+
+
+.slide-out {
+  margin-left: -300px;
+  transition: margin-left 0.5s ease-in-out;
+}
+.slide-in {
+  margin-left: -2px;
+  transition: margin-left 0.5s ease-in-out;
+}
+
 
   /*LARGURA E PARAMETROS DA DIV DENTRO DO SLIDE*/
   .informacao1{
