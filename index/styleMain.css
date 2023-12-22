@@ -19,7 +19,8 @@ body{
 }
 
 
-#imagemFundo{
+#imagemFundo{  /*logo de fundo atrás dos slides*/
+  opacity: 50%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -61,64 +62,62 @@ body{
     margin-left: -16px;
     width: auto;
 }
-
 .container h5 { /*CONFIG H5*/
     margin: 0;
     transform: skew(20deg);
     color: rgb(0, 94, 184);
     margin-top: 10px;
 }
-
-.carousel-item{
+.carousel-item{/*fundo dos itens dentro do carrossel do bootstrap*/
   background-color: white;
   height: 774px;
 }
-.carousel-item .active{
+.carousel-item .active{ /*formatando a altura do item dentro do carrossel do bootstrap*/
  height: 757px;
 }
 /*CONFIG TEXTO MENU*/
-  #texto1{
-    margin-left: 89px;
-    position: fixed;
-    color: white;
-  }
-  #texto2{
-    margin-left: 89px;
-    position: fixed;
-    color: white;
-  }
-  #texto3{
-    margin-left: 79px;
-    position: fixed;
-    color: white;
-  }
-  #texto5{
-    margin-left: 89px;
-    position: fixed;
-    color: white;
-  }
-  #texto6{
-    margin-left: 21px;
-    position: fixed;
-    color: white;  
-  }
-  #texto7{
-    position: fixed;
-    margin: auto;
-    margin-left: 79px;
-    color: white;
-  }
-  #texto8{
-    position: fixed;
-    margin: auto;
-    margin-left: 79px;
-    color: white;
-  }
-  #texto9{
-    position: fixed;
-    margin-left: 79px;
-    color: white;
-  }
+#texto1{
+  margin-left: 89px;
+  position: fixed;
+  color: white;
+}
+#texto2{
+  margin-left: 89px;
+  position: fixed;
+  color: white;
+}
+#texto3{
+  margin-left: 79px;
+  position: fixed;
+  color: white;
+}
+#texto5{
+  margin-left: 89px;
+  position: fixed;
+  color: white;
+}
+#texto6{
+  margin-left: 21px;
+  position: fixed;
+  color: white;  
+}
+#texto7{
+  position: fixed;
+  margin: auto;
+  margin-left: 79px;
+  color: white;
+}
+#texto8{
+  position: fixed;
+  margin: auto;
+  margin-left: 79px;
+  color: white;
+}
+#texto9{
+  position: fixed;
+  margin-left: 79px;
+  color: white;
+}
   
 /*CONFIG TEXTO MENU*/
 
@@ -151,11 +150,11 @@ body{
   /* CSS */
 
 
-.slide-out {
+.slide-out { /*Fazer o elemento sumir da tela*/
   margin-left: -300px;
   transition: margin-left 0.5s ease-in-out;
 }
-.slide-in {
+.slide-in {/*Trazer o elemento de volta*/
   margin-left: -2px;
   transition: margin-left 0.5s ease-in-out;
 }
