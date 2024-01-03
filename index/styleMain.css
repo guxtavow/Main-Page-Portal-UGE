@@ -17,13 +17,9 @@ body{
     margin-left: -2px;
 }
 
-<<<<<<< HEAD
 
-#imagemFundo{  /*logo de fundo atrás dos slides*/
-  opacity: 50%;
-=======
+
 #imagemFundo{
->>>>>>> last-old-layout
   position: fixed;
   top: 50%;
   left: 50%;
