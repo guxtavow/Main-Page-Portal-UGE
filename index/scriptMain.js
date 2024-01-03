@@ -29,6 +29,8 @@ $(document).ready(function () { //Inicio o processo para rolagem do carrossel
         }
 
         //assim que a classe "active" chega no index 5 do menu, ativa mais 2 containers no próprio 
+        
+        
         if(dataSlide1.hasClass("active") || dataSlide2.hasClass("active") || dataSlide3.hasClass("active")) {
             $(".container[data-slide-to='5'], .container[data-slide-to='6']").show()
             if(dataSlide3.hasClass("active")){ //assim que acabar um slide, sumir e deixar apenas o slide seguinte
@@ -40,13 +42,6 @@ $(document).ready(function () { //Inicio o processo para rolagem do carrossel
             $(".container[data-slide-to='5'], .container[data-slide-to='6']").hide()
         }
         
-
-
-
     });
     
-
-
-
-
   })

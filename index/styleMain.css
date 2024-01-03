@@ -1,7 +1,7 @@
 body{
   background: linear-gradient(to top,#3B4AFF, #40BBFF) no-repeat center center fixed; /*UTILIZA A COR LINEARMENTE APLICANDO O GRADIENTE EM TODA A PAGINA SEM REPETIÇÕES NO CENTRO*/
   height: 100%;
-  
+
 
 }
 .container { /*CONTAINER DO MENU*/
@@ -11,23 +11,27 @@ body{
     transform: skew(-30deg);   
     display: inline-block;
     vertical-align: top;
-    background: linear-gradient(to bottom,#3B4AFF, #0024A9);
+    background: linear-gradient(to right,#9285F9,#3B4AFF);
     border: 3px solid;
     margin-top: -3px;
     margin-left: -2px;
-    transition: transform 1s ease-in-out;
 }
 
+<<<<<<< HEAD
 
 #imagemFundo{  /*logo de fundo atrás dos slides*/
   opacity: 50%;
+=======
+#imagemFundo{
+>>>>>>> last-old-layout
   position: fixed;
   top: 50%;
   left: 50%;
-  transform:  translate(-50%,-34%) ;
+  transform:  translate(-50%,-34%);
   width: 780px; 
   height: 340px;
   z-index: -1;
+  opacity: 80%;
 }
 
 
@@ -61,6 +65,7 @@ body{
     position: fixed;
     margin-left: -16px;
     width: auto;
+    vertical-align: top;
 }
 .container h5 { /*CONFIG H5*/
     margin: 0;
@@ -204,6 +209,7 @@ body{
     display: inline-block;
     margin-left: 20px;
   }
+
   .info3 h1{
     display: flex;
     justify-content: center;
@@ -249,9 +255,8 @@ body{
   
 @media screen and (max-width:1600px) {/*PARA TELAS COM MENOS DE 1600PX (NOTEBOOKS, DESKTOPS ETC)*/
   body{
-    background: linear-gradient(to top,#40BBFF,#3B4AFF);
-    height: 695px;
-    position: relative;
+    background: linear-gradient(to top,#3B4AFF, #40BBFF) no-repeat center center fixed; /*UTILIZA A COR LINEARMENTE APLICANDO O GRADIENTE EM TODA A PAGINA SEM REPETIÇÕES NO CENTRO*/
+    height: 100%;
   }
 
   #imagemFundo{
@@ -277,8 +282,18 @@ body{
     margin-top: -3px;
     margin-left: -2px;
     z-index: 2;
-
+    transition: transform 1s ease-in-out;
 }
+
+.slide-out {
+  margin-left: -300px;
+  transition: margin-left 0.5s ease-in-out;
+}
+.slide-in {
+  margin-left: -2px;
+  transition: margin-left 0.5s ease-in-out;
+}
+
 
 .container h5{
   font-size: 15px;
@@ -317,8 +332,8 @@ body{
     justify-content: center;
     position: fixed;
     margin-left: 69px;
-
 }
+
 .container h5 {
     transform: skew(20deg);
     color: rgb(0, 94, 184);
@@ -460,8 +475,8 @@ color: white;
   align-content: center;
   margin:auto;
   margin-top: 10px;
-
 }
+
 .info2{
   border: solid;
   width: 250px;
