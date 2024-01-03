@@ -26,8 +26,8 @@ $(document).ready(function () { //Inicio o processo para rolagem do carrossel
             dataSlide.removeClass('slide-out');
             dataSlide.addClass('slide-in');
         }
-
-
+        
+        
         if(dataSlide1.hasClass("active") || dataSlide2.hasClass("active") || dataSlide3.hasClass("active")) {
             $(".container[data-slide-to='5'], .container[data-slide-to='6']").show()
             if(dataSlide3.hasClass("active")){
@@ -39,13 +39,6 @@ $(document).ready(function () { //Inicio o processo para rolagem do carrossel
             $(".container[data-slide-to='5'], .container[data-slide-to='6']").hide()
         }
         
-
-
-
     });
     
-
-
-
-
   })
