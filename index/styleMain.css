@@ -1,56 +1,72 @@
 body{
   background: linear-gradient(to top,#3B4AFF, #40BBFF) no-repeat center center fixed; /*UTILIZA A COR LINEARMENTE APLICANDO O GRADIENTE EM TODA A PAGINA SEM REPETIÇÕES NO CENTRO*/
   height: 100%;
-
-
-}
-.container { /*CONTAINER DO MENU*/
-    border: solid;
-    width: 298px;
-    height:50px;
-    transform: skew(-30deg);   
-    display: inline-block;
-    vertical-align: top;
-    background: linear-gradient(to right,#9285F9,#3B4AFF);
-    border: 3px solid;
-    margin-top: -3px;
-    margin-left: -2px;
 }
 
-
-
-#imagemFundo{
+#imagemFundo{ /*IMAGEM DO SEBRAE NO FUNDO DA PAGINA*/
   position: fixed;
   top: 50%;
   left: 50%;
   transform:  translate(-50%,-34%);
-  width: 780px; 
+  width: 780px;
   height: 340px;
   z-index: -1;
   opacity: 80%;
 }
 
 
-.container2 {/*CONTAINER DO MENU (LOGO IMAGEM)*/
-    border: solid;
-    display: inline-block;
-    width: fit-content;
-    transform: skew(-30deg);   
-    background-color: rgb(146,133, 249);
-    border: solid;
-    z-index: 2;  
-  }
-.container2 img{/*IMAGEM SEBRAE LOGO*/
-    transform: skew(30deg);
-    width: 200px; height: 110px;
+#fechar{ /* BOTÃO FECHAR DO CANVAS*/ 
+  background-color: transparent;
+  border: 0px;
+  font-size: 28px;
+  float: right;
+  margin-right: 8px;
+  margin-top: -5px;
+  transition: transform 0.5s ease;
 }
+
+#abrir{ /* BOTÃO ABRIR DO CANVAS*/
+  background-color: transparent;
+  border: 0px;
+  font-size: 28px;
+  float: left;
+  position: absolute;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+#abrir:hover{ /*EFEITO HOVER NO BOTÃO ABRIR*/
+  transform: scale(1.2);
+}
+
+#fechar:hover{ /*EFEITO HOVER NO BOTÃO FECHAR*/
+  transform: scale(1.2);
+}
+
+.menu{ /* MENU/OFFCANVAS */
+  position: relative;
+  margin-left: -310px;
+  width: 310px;
+  min-height: 100vh;
+  background-color: grey;
+  border: solid 2px;
+  vertical-align: top;
+  transition: margin-left 1.5s ease-in-out;
+  display: inline-block;
+  z-index: 2;
+}
+
+
 .container-carrossel{/*CONTAINER GERAL DO CARROSSEL*/
-    border: solid;
-    width: 1850px;
-    height: 780px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+  border: solid;
+  display: flex;
+  width: 1570px;
+  height: 100vh;
+  float: right;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 15px;
+  
 }
 .containerss{ /*CONTAINER DENTRO DO CONTAINER GERAL*/
     width: 100%;
@@ -71,10 +87,10 @@ body{
 }
 .carousel-item{/*fundo dos itens dentro do carrossel do bootstrap*/
   background-color: white;
-  height: 774px;
+  height: 99vh;
 }
 .carousel-item .active{ /*formatando a altura do item dentro do carrossel do bootstrap*/
- height: 757px;
+ height: 99vh;
 }
 /*CONFIG TEXTO MENU*/
 #texto1{
@@ -149,17 +165,6 @@ body{
   }
 
   /* CSS */
-
-
-.slide-out { /*Fazer o elemento sumir da tela*/
-  margin-left: -300px;
-  transition: margin-left 0.5s ease-in-out;
-}
-.slide-in {/*Trazer o elemento de volta*/
-  margin-left: -2px;
-  transition: margin-left 0.5s ease-in-out;
-}
-
 
   /*LARGURA E PARAMETROS DA DIV DENTRO DO SLIDE*/
   .informacao1{
@@ -246,10 +251,14 @@ body{
   }
   
   .carousel-item img{/*DEFINIÇÃO DAS PROPRIEDADES DAS IMAGENS*/
-    width: 1400px;height: 776px;
+    width: 1400px;
+    height: 100vh;
   }
   
-@media screen and (max-width:1600px) {/*PARA TELAS COM MENOS DE 1600PX (NOTEBOOKS, DESKTOPS ETC)*/
+
+
+  /*PARA TELAS COM MENOS DE 1600PX (NOTEBOOKS, DESKTOPS ETC)*/
+@media screen and (max-width:1600px) {
   body{
     background: linear-gradient(to top,#3B4AFF, #40BBFF) no-repeat center center fixed; /*UTILIZA A COR LINEARMENTE APLICANDO O GRADIENTE EM TODA A PAGINA SEM REPETIÇÕES NO CENTRO*/
     height: 100%;
