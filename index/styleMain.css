@@ -43,6 +43,10 @@ body{
   transform: scale(1.2);
 }
 
+.container:hover{
+  transform: scale(1.2);
+}
+
 .menu{ /* MENU/OFFCANVAS */
   position: relative;
   margin-left: -310px;
@@ -56,18 +60,27 @@ body{
   z-index: 2;
 }
 
+.container{
+  opacity: 60%;
+  transition: transform 1s ease ;
+}
+
 
 .container-carrossel{/*CONTAINER GERAL DO CARROSSEL*/
   border: solid;
   display: flex;
-  width: 1570px;
+  width: 77vw;
   height: 100vh;
   float: right;
   align-items: center;
   margin-left: auto;
   margin-right: 15px;
-  
 }
+
+#triangulo{
+transition: 2s ease;
+}
+
 .containerss{ /*CONTAINER DENTRO DO CONTAINER GERAL*/
     width: 100%;
 }
@@ -79,12 +92,7 @@ body{
     width: auto;
     vertical-align: top;
 }
-.container h5 { /*CONFIG H5*/
-    margin: 0;
-    transform: skew(20deg);
-    color: rgb(0, 94, 184);
-    margin-top: 10px;
-}
+
 .carousel-item{/*fundo dos itens dentro do carrossel do bootstrap*/
   background-color: white;
   height: 99vh;
@@ -145,14 +153,14 @@ body{
     overflow: hidden;
   }
   /*DEFININDO ESPECIFICAÇÃO PARA ATIVAÇÃO DA BARRA DE PROGRESSO*/
-  .container-geral .active .progresso{
-    position: absolute;
+  .menu .active {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: #84F4BC; /* Cor da barra de progresso */
-    animation: grow 5s ease-in-out infinite; /* Animação de crescimento */
-    transform-origin: left center; /* Ponto de origem da transformação */
+    color: #84F4BC; /* Cor da barra de progresso */
+    transform: scale(1.2);
+    opacity: 100%;
+    transition: transform 0.8s ease;
   }
   
   @keyframes grow {/*USADO PARA FAZER A BARRA DE PROGRESSO*/
@@ -263,313 +271,270 @@ body{
     background: linear-gradient(to top,#3B4AFF, #40BBFF) no-repeat center center fixed; /*UTILIZA A COR LINEARMENTE APLICANDO O GRADIENTE EM TODA A PAGINA SEM REPETIÇÕES NO CENTRO*/
     height: 100%;
   }
-
-  #imagemFundo{
-    position: absolute;
+  
+  #imagemFundo{ /*IMAGEM DO SEBRAE NO FUNDO DA PAGINA*/
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform:  translate(-50%,-34%) ;
-    width: 780px; 
+    transform:  translate(-50%,-34%);
+    width: 780px;
     height: 340px;
     z-index: -1;
+    opacity: 80%;
+  }
+  
+  #ocultos{
+  transform: translateY(-100%);
+  transition: transform 1s ease-in;
+  display: none;
   }
 
-  /*MENU*/
-  .container {
-    border: solid ;
-    width: 408px;
-    height: 15px;
-    transform: skew(-30deg);   
-    display: inline-block;
+  #fechar{ /* BOTÃO FECHAR DO CANVAS*/ 
+    background-color: transparent;
+    border: 0px;
+    font-size: 28px;
+    float: right;
+    margin-right: 8px;
+    margin-top: -5px;
+    transition: transform 0.5s ease;
+  }
+  
+  #abrir{ /* BOTÃO ABRIR DO CANVAS*/
+    background-color: transparent;
+    border: 0px;
+    font-size: 28px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    transition: transform 1s ease-in;
+  }
+  
+  #abrir:hover{ /*EFEITO HOVER NO BOTÃO ABRIR*/
+    transform: scale(1.2);
+  }
+  
+  #fechar:hover{ /*EFEITO HOVER NO BOTÃO FECHAR*/
+    transform: scale(1.2);
+  }
+  
+  .container:hover{
+    transform: scale(1.2);
+  }
+  
+  .menu{ /* MENU/OFFCANVAS */
+    position: relative;
+    margin-left: -510px;
+    min-width: 21vw;
+    min-height: 100vh;
+    background-color: grey;
+    border: solid 2px;
     vertical-align: top;
-    border: 2px solid;
-    background: linear-gradient(to right,#9285F9,#3B4AFF);
-    margin-top: -3px;
-    margin-left: -2px;
-    z-index: 2;
-    transition: transform 1s ease-in-out;
-}
-
-.slide-out {
-  margin-left: -300px;
-  transition: margin-left 0.5s ease-in-out;
-}
-.slide-in {
-  margin-left: -2px;
-  transition: margin-left 0.5s ease-in-out;
-}
-
-
-.container h5{
-  font-size: 15px;
-}
-
-.container2 {
-    border: solid;
+    transition: margin-left 1.5s ease-in-out;
     display: inline-block;
-    width: fit-content;
-    transform: skew(-30deg);   
-    margin-left: -30px;
-    margin-right: 20px;
-    background-color: rgb(146,133, 249);
-    border:solid;
-}
-
-.container2 img{
-    transform: skew(30deg);
-    width: 180px; height: 100px;
-}
-  /*MENU*/
-
-.container-carrossel{
+    z-index: 2;
+  }
+  
+  .container{
+    opacity: 60%;
+    transition: transform 1s ease;
+  }
+  
+  .container-carrossel{/*CONTAINER GERAL DO CARROSSEL*/
     border: solid;
-    width: 1440px;
-    height: 570px;
-    margin: auto;
     display: flex;
-    justify-content: center;
-}
-.containerss{
-    width: 100%;
-}
-.container-geral{
-    display: flex;
-    justify-content: center;
+    width: 78vw;
+    height: 100vh;
+    float: right;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  
+  #triangulo{
+  transition: 2s ease;
+  }
+  
+  .containerss{ /*CONTAINER DENTRO DO CONTAINER GERAL*/
+      width: 100%;
+  }
+  .container-geral{/*CONTAINER GERAL DOS SLIDES*/
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      margin-left: -16px;
+      width: auto;
+      vertical-align: top;
+  }
+  
+  .carousel-item{/*fundo dos itens dentro do carrossel do bootstrap*/
+    background-color: white;
+    height: 99vh;
+  }
+  .carousel-item .active{ /*formatando a altura do item dentro do carrossel do bootstrap*/
+   height: 99vh;
+  }
+  /*CONFIG TEXTO MENU*/
+  #texto1{
+    margin-left: 89px;
     position: fixed;
-    margin-left: 69px;
-}
-
-.container h5 {
-    transform: skew(20deg);
-    color: rgb(0, 94, 184);
-    margin-top: 10px;
-} 
-
-.carousel-item{
-  background-color: white;
-  height: 566px;
-}
-.carousel-item .active{
- height: 530px;
-}
-
-
-/*CONFIG TEXTO MENU*/
-#texto1{
-position: fixed;
-margin-right: 20px;
-margin-left: 50px;
-margin-top: 15px;
-text-align: center;
-color: white;
-}
-
-#texto2{
-  position: fixed;
-  margin-right: 20px;
-  margin-top: 15px;
-  margin-left: 50px;
-  text-align: center;
-  color: white;
-
-}
-
-#texto3{
-  position: fixed;
-  margin-right: 20px;
-  margin-left: 50px;
-  margin-top: 15px;
-  text-align: center;
-  color: white;
-
-}
-
-#texto5{
-  position: fixed;
-  margin-right: 20px;
-  margin-left: 50px;
-  margin-top: 15px;
-  text-align: center;
-  color: white;
-
-}
-
-#texto6{
-  position: absolute;  
-  margin-right: 20px;
-  margin-top: 3px;
-  text-align: center;
-  color: white;
-
-}
-
-#texto7{
-  position: fixed;
-  margin-right: 20px;
-  margin-left: 50px;
-  text-align: center;
-  color: white;
-
-}
-
-#texto8{
-  position: fixed;
-  margin-right: 20px;
-  margin-left: 50px;
-  text-align: center;
-  color: white;
-
-}
-
-#texto9{
-  position: fixed;
-  margin-top: 15px;
-  margin-right: 20px;
-  margin-left: 50px;
-  text-align: center;
-  color: white;
-
-}
-/*CONFIG TEXTO MENU*/
-
-.progresso #texto1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#indicador { /*ID DE INDICADOR NO MENU*/
-  position: relative;
-  width: 209px; /* Largura da div */
-  height: 50px; /* Altura da div */
-  overflow: hidden;
+    color: white;
+  }
+  #texto2{
+    margin-left: 89px;
+    position: fixed;
+    color: white;
+  }
+  #texto3{
+    margin-left: 79px;
+    position: fixed;
+    color: white;
+  }
+  #texto5{
+    margin-left: 89px;
+    position: fixed;
+    color: white;
+  }
+  #texto6{
+    margin-left: 21px;
+    position: fixed;
+    color: white;  
+  }
+  #texto7{
+    position: fixed;
+    margin: auto;
+    margin-left: 79px;
+    color: white;
+  }
+  #texto8{
+    position: fixed;
+    margin: auto;
+    margin-left: 79px;
+    color: white;
+  }
+  #texto9{
+    position: fixed;
+    margin-left: 79px;
+    color: white;
+  }
+    
+  /*CONFIG TEXTO MENU*/
   
-}
-/*DEFININDO ESPECIFICAÇÃO PARA ATIVAÇÃO DA BARRA DE PROGRESSO*/
-.container-geral .active .progresso{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #84F4BC; /* Cor da barra de progresso */
-  animation: grow 5s ease-in-out infinite; /* Animação de crescimento */
-  transform-origin: left center; /* Ponto de origem da transformação */
-}
-
-.container .active .progresso{
-  animation-play-state: paused; /* Pausar a animação quando o indicador está ativo */
-}
-
-@keyframes grow {/*USADO PARA FAZER A BARRA DE PROGRESSO*/
-  0% {
-    width: 0; /* Largura inicial da barra de progresso */
-  }
-  100% {
-    width: 100%; /* Largura final da barra de progresso */
-  }
-}
-
-/*LARGURA E PARAMETROS DA DIV DENTRO DO SLIDE*/
-.informacao1{
-  border: solid;
-  border-radius: 60px;
-  width: 1320px;
-  height: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin:auto;
-  margin-top: 10px;
-}
-
-.info2{
-  border: solid;
-  width: 250px;
-  border-radius: 60px;
-  height: 370px;
-  margin-left: 25px;
-  float: left;
-  margin-top: -21px;
-}
-.info2 h5{
-  margin-top: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.info2 p{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 12px;
-}
-.info3{
-  border: solid;
-  width: 850px;
-  border-radius: 60px;
-  height: 360px;
-  margin-top: -14px;
-  display: inline-block;
-  font-size: 12px;
-  margin-left: 20px;
-  overflow: hidden;
-}
-.info3:hover{
-  overflow: auto;
-}
-.info3::-webkit-scrollbar{
-  width: 5px;
-  border-radius: 10px;
-  height: 10px;
-  }
+    #indicador { /*ID DE INDICADOR NO MENU*/
+      position: relative;
+      width: 298px; /* Largura da div */
+      height: 50px; /* Altura da div */
+      overflow: hidden;
+    }
+    /*DEFININDO ESPECIFICAÇÃO PARA ATIVAÇÃO DA BARRA DE PROGRESSO*/
+    .menu .active {
+      top: 0;
+      left: 0;
+      height: 100%;
+      color: #84F4BC; /* Cor da barra de progresso */
+      transform: scale(1.2);
+      opacity: 100%;
+      transition: transform 0.8s ease;
+    }
+    
+    @keyframes grow {/*USADO PARA FAZER A BARRA DE PROGRESSO*/
+      0% {
+        width: 0; /* Largura inicial da barra de progresso */
+      }
+      100% {
+        width: 100%; /* Largura final da barra de progresso */
+      }
+    }
   
-.info3::-webkit-scrollbar-button{
-  height: 40px;
-
-}
-.info3::-webkit-scrollbar-thumb{
-  border-radius: 40px;
-  background-color: #9285F9;
-}
-.info3 h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.info3 p{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin:auto;
-}
-.info4{
-  border: solid;
-  width: 250px;
-  border-radius: 60px;
-  height: 360px;
-  margin-right: 30px;
-  float: right;
-  margin-top: -14px;
-}
-.info4 h5{
-  margin-top: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.info4 p{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 12px;
-}
-#texto{
-  margin: 15px;
-}
-
-.carousel-item img{
-  width: 1400px;height: 566px;
-}
+    /* CSS */
+  
+    /*LARGURA E PARAMETROS DA DIV DENTRO DO SLIDE*/
+    .informacao1{
+      border: solid;
+      border-radius: 60px;
+      width: 1160px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      margin:auto;
+      margin-top: 10px;
+  
+    }
+    .info2{
+      border: solid;
+      width: 250px;
+      border-radius: 60px;
+      height: 500px;
+      margin-left: 25px;
+      float: left;
+      margin-top: -14px;
+  }
+    .info2 h5{
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .info2 p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .info3{
+      border: solid;
+      width: 700px;
+      border-radius: 60px;
+      height: 500px;
+      margin-top: -14px;
+      display: inline-block;
+      margin-left: 20px;
+    }
+  
+    .info3 h1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .info3 p{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin:auto;
+    }
+    .info4{
+      border: solid;
+      width: 250px;
+      border-radius: 60px;
+      height: auto;
+      margin-right: 30px;
+      float: right;
+      margin-top: -9px;
+  }
+    .info4 h5{
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .info4 p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    /*LARGURA E PARAMETROS DA DIV DENTRO DO SLIDE*/
+  
+    /*TEXTO DE FORMATAÇÃO DENTRO DO SLIDE*/
+    #texto{
+      margin: 10px;
+    }
+    
+    .carousel-item img{/*DEFINIÇÃO DAS PROPRIEDADES DAS IMAGENS*/
+      width: 1400px;
+      height: 100vh;
+    }
+    
+  
 }

@@ -94,7 +94,7 @@ body{
 }
 
 .animate {
-    transform: scale(0.5) translate(-76vw, -72vh);
+    transform: scale(0.5) translate(-76vw, -69vh); /* ANIMAÇÃO E DEFINIÇÃO DE POSICIONAMENTO DA ALTURA E LARGURA DO LOGO*/
 }
 
 .offcanvas {
